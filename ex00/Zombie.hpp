@@ -2,16 +2,20 @@
 # define ZOMBIE_HPP
 # include <string>
 # include <iostream>
+# include <new>
 
 class Zombie {
   public:
     Zombie(std::string name);
     ~Zombie();
     std::string getName();
-    void  announce();
+    void        announce();
 
   private:
     std::string _name;
 };
+
+Zombie  *newZombie(std::string name);
+void    randomChump(std::string name);
 
 #endif
