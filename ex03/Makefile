@@ -2,7 +2,8 @@ NAME = ultraviolence
 FLAGS = -Wall -Wextra -Werror -std=c++98
 CPP = c++
 
-SRCS = main.cpp
+SRCS = main.cpp \
+		Weapon.cpp
 
 OBJS = $(SRCS:.cpp=.o)
 
