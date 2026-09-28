@@ -1,20 +1,16 @@
-#include <iostream>
-#include <cstdlib>
 #include "Zombie.hpp"
 
-int main(int ac, char **av)
+int main(void)
 {
-    (void)av;
+    Zombie *horde;
+    int N = 3;
 
-    if (ac > 1)
+    horde = zombieHorde(N, "Horde");
+    for (int i = 0; i < N; i++)
     {
-        std::cout << "This program doesn't allows you to start with inputs!" << std::endl;
-        return (1);
+        horde[i].announce();
     }
 
-    Zombie  zombie(3, "Pedro");
-    // Zombie  *zombie;
-    // zombie = zombieHorde(7, "Zombie");
-
-    return (EXIT_SUCCESS);
+    delete[] horde;
+    return (0);
 }

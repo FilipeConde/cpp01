@@ -1,22 +1,28 @@
 #ifndef ZOMBIE_HPP
-# define ZOMBIE_HPP
-# include <string>
-# include <iostream>
-# include <new>
-# include <sstream>
+#define ZOMBIE_HPP
 
-class Zombie {
-  public:
-    Zombie(std::string name);
-    Zombie(int n, std::string name);
-    ~Zombie();
-    std::string getName();
-    void        announce();
+#include <string>
+#include <iostream>
+#include <new>
+#include <sstream>
 
-  private:
-    std::string _name;
+class Zombie
+{
+private:
+  std::string _name;
+  int _index;
+
+public:
+  Zombie();
+  Zombie(std::string name, int i);
+  ~Zombie();
+
+  int getIndex();
+  void announce(void);
+  void setName(std::string name);
+  void setIndex(int i);
 };
 
-Zombie* zombieHorde(int n, std::string name);
+Zombie *zombieHorde(int N, std::string name);
 
 #endif

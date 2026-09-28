@@ -1,26 +1,34 @@
 #include "Zombie.hpp"
 
-Zombie::Zombie(std::string name) {
+Zombie::Zombie() {}
+
+Zombie::Zombie(std::string name, int i)
+{
   this->_name = name;
-  std::cout << getName() << " created!" << std::endl;
+  this->_index = i;
 }
 
-Zombie::Zombie(int n, std::string name) {
-  std::string n_str;
-  std::stringstream ss;
-
-  ss << n;
-  n_str = ss.str();
-  this->_name = name + " #" + n_str;
-  std::cout << getName() << " created!" << std::endl;
+Zombie::~Zombie()
+{
+  std::cout << this->_name + " destroyed!" << std::endl;
 }
 
-Zombie::~Zombie() {
-  std::cout << getName() << " destroyed!" << std::endl;
+int Zombie::getIndex()
+{
+  return (_index);
 }
 
-std::string Zombie::getName() { return _name; }
+void Zombie::announce()
+{
+  std::cout << _name << ": BraiiiiiiinnnzzzZ..." << std::endl;
+}
 
-void  Zombie::announce() {
-  std::cout << getName() << ": BraiiiiiiinnnzzzZ..." << std::endl;
+void Zombie::setName(std::string name)
+{
+  this->_name = name;
+}
+
+void Zombie::setIndex(int i)
+{
+  this->_index = i;
 }
