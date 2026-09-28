@@ -1,3 +1,5 @@
 *.o
 zombie
+horde
+brain
 .vscode

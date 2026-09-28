@@ -1,4 +1,4 @@
-NAME = zombie
+NAME = horde
 FLAGS = -Wall -Wextra -Werror -std=c++98
 CPP = c++
 
