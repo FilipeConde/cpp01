@@ -3,7 +3,8 @@ FLAGS = -Wall -Wextra -Werror -std=c++98
 CPP = c++
 
 SRCS = main.cpp \
-		Weapon.cpp
+		Weapon.cpp \
+		HumanA.cpp
 
 OBJS = $(SRCS:.cpp=.o)
 
