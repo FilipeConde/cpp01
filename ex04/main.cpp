@@ -18,6 +18,10 @@ int main(int ac, char **av){
   readFile.open(av[1]);
 
   while(std::getline(readFile, line)){
+    if(line.find(av[2]) != std::string::npos)
+    {
+      std::cout << "\nHAS IT!" << std::endl;
+    }
     std::cout << line << std::endl;
   }
   readFile.close();
@@ -25,6 +29,7 @@ int main(int ac, char **av){
   // 
   // [x] receive three parameters (filename, str1 and str2);
   // [x] open file
+  // [x] find occurrence of string in line;
   // [ ] copy content for <new_file>.replace replacing str1 by str2;
   // [ ] mustn't use std::string::replace nor C file manipulations functions;
   // [ ] Deal with errors;
