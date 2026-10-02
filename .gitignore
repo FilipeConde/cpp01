@@ -1,4 +1,6 @@
 *.o
+*.txt
+*.replace
 zombie
 horde
 brain
