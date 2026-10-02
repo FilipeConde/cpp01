@@ -25,17 +25,16 @@ int main(int ac, char **av){
   std::ifstream readFile;
   std::ofstream writeFile;
   std::string line;
+  Chunk chunk;
 
   readFile.open(av[1]);
   writeFile.open("./output.replace");
 
   while(std::getline(readFile, line)){
-    if(line.find(av[2]) != std::string::npos)
-    {
-      std::cout << "\nHAS IT!" << std::endl;
-    }
-    std::cout << line << std::endl;
-    writeFile << line << std::endl;
+    chunk.setInput(line);
+    chunk.setOutput(av[2], av[3]);
+    std::cout << chunk.getOutput() << std::endl;
+    writeFile << chunk.getOutput() << std::endl;
   }
 
   readFile.close();

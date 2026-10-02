@@ -8,9 +8,9 @@ class Chunk{
     ~Chunk();
 
     std::string getInput();
-    void setInput();
+    void setInput(std::string line);
     std::string getOutput();
-    void setOutput();
+    void setOutput(std::string target, std::string newStr);
 
   private:
     std::string _input;

@@ -2,7 +2,8 @@ NAME = fok_sed
 FLAGS = -Wall -Wextra -Werror -std=c++98
 CPP = c++
 
-SRCS = main.cpp
+SRCS = main.cpp \
+				Chunk.cpp
 
 OBJS = $(SRCS:.cpp=.o)
 
