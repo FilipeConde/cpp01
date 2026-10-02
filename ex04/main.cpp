@@ -1,9 +1,19 @@
 #include <string>
 #include <iostream>
 #include <fstream>
+#include "Chunk.hpp"
 
 int main(int ac, char **av){
-
+  // 
+  // [x] receive three parameters (filename, str1 and str2);
+  // [x] open file
+  // [x] find occurrence of string in line;
+  // [x] copy content for <new_file>;
+  // [ ] create class for chunks;
+  // [ ] replace replacing str1 by str2;
+  // [ ] mustn't use std::string::replace nor C file manipulations functions;
+  // [ ] Deal with errors;
+  // 
   (void)av;
   if(ac != 4){
     std::cout
@@ -27,20 +37,9 @@ int main(int ac, char **av){
     std::cout << line << std::endl;
     writeFile << line << std::endl;
   }
+
   readFile.close();
   writeFile.close();
-
-  // 
-  // [x] receive three parameters (filename, str1 and str2);
-  // [x] open file
-  // [x] find occurrence of string in line;
-  // [x] copy content for <new_file>;
-  // [ ] replace replacing str1 by str2;
-  // [ ] mustn't use std::string::replace nor C file manipulations functions;
-  // [ ] Deal with errors;
-  // 
-
-  // std::cout << "RUNNING PROGRAM" << std::endl;
 
   return (0);
 }
