@@ -9,7 +9,8 @@ int main(int ac, char **av){
   // [x] open file
   // [x] find occurrence of string in line;
   // [x] copy content for <new_file>;
-  // [ ] create class for chunks;
+  // [x] create class for chunks;
+  // [ ] setup setters for Chunk class;
   // [ ] replace replacing str1 by str2;
   // [ ] mustn't use std::string::replace nor C file manipulations functions;
   // [ ] Deal with errors;
