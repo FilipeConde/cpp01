@@ -15,7 +15,6 @@ int main(int ac, char **av){
   // [ ] mustn't use std::string::replace nor C file manipulations functions;
   // [ ] Deal with errors;
   // 
-  (void)av;
   if(ac != 4){
     std::cout
       << "Inform param1 [input file name], param2 [string to change] and param3 [substitute string]."

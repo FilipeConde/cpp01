@@ -15,7 +15,7 @@ $(NAME): $(OBJS)
 	$(CPP) $(FLAGS) -c $< -o $@
 
 clean:
-	rm -rf *.o
+	rm -rf *.o *.replace
 
 fclean: clean
 	rm -rf $(NAME)
