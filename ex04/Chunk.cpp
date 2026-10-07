@@ -13,7 +13,11 @@ void Chunk::setInput(std::string line){
 
 std::string Chunk::getOutput() { return _output; }
 
-void Chunk::setOutput(std::string target, std::string newStr){
+void Chunk::setOutput(const std::string &target, const std::string &newStr){
+  if(target.empty()){
+    _output = _input;
+    return;
+  }
 
   std::string result = "";
   int targetLen = target.length();

@@ -4,17 +4,6 @@
 #include "Chunk.hpp"
 
 int main(int ac, char **av){
-  // 
-  // [x] receive three parameters (filename, str1 and str2);
-  // [x] open file
-  // [x] find occurrence of string in line;
-  // [x] copy content for <new_file>;
-  // [x] create class for chunks;
-  // [ ] setup setters for Chunk class;
-  // [ ] replace replacing str1 by str2;
-  // [ ] mustn't use std::string::replace nor C file manipulations functions;
-  // [ ] Deal with errors;
-  // 
   if(ac != 4){
     std::cout
       << "Inform param1 [input file name], param2 [string to change] and param3 [substitute string]."

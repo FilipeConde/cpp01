@@ -10,7 +10,7 @@ class Chunk{
     std::string getInput();
     void setInput(std::string line);
     std::string getOutput();
-    void setOutput(std::string target, std::string newStr);
+    void setOutput(const std::string &target, const std::string &newStr);
 
   private:
     std::string _input;
