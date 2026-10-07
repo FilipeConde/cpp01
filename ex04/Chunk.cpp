@@ -14,28 +14,18 @@ void Chunk::setInput(std::string line){
 std::string Chunk::getOutput() { return _output; }
 
 void Chunk::setOutput(std::string target, std::string newStr){
-  (void)newStr;
+
+  std::string result = "";
   int targetLen = target.length();
-  int pos = 0;
+  size_t start = 0;
+  size_t pos = _input.find(target, start);
   
-  while(((pos = _input.find(target)) != std::string::npos)){
-    for(int i = 0; i < pos; i++){
-      std::cout << _input[i];
-    }
+  while(pos != std::string::npos){
+    result += _input.substr(start, pos - start);
+    result += newStr;
+    start = pos + targetLen;
+    pos = _input.find(target, start);
   }
-  if(_input.find(target) != std::string::npos){
-
-    std::cout << "\nHAS IT!" << std::endl;
-  } else{
-    _output = _input;
-  }
+  result += _input.substr(start);
+  _output = result;
 }
-
-/*
-  - set target length and replacement length;
-  - find target starting pos;
-  - print previous part;
-  - print replacement;
-  - update string pos to after target;
-  - keep finding target;
-*/
