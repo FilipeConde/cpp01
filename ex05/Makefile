@@ -2,7 +2,8 @@ NAME = harl
 FLAGS = -Wall -Wextra -Werror -std=c++98
 CPP = c++
 
-SRCS = main.cpp
+SRCS = main.cpp \
+		Harl.cpp
 
 OBJS = $(SRCS:.cpp=.o)
 
