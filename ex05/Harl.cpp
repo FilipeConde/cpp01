@@ -31,5 +31,5 @@ void Harl::warning( void ){
     std::cout << "WARN message" << std::endl;
 }
 void Harl::error( void ){
-    std::cout << "ERRPR message" << std::endl;
+    std::cout << "ERROR message" << std::endl;
 }
